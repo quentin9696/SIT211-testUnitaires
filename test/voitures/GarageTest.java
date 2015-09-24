@@ -28,7 +28,6 @@ public class GarageTest {
 
 	@Before
 	public void setUp() {
-		// TODO
 		// Declare 1 garage de 20 places
 		garage = new Garage(20);
 		garage2 = new Garage(10);
@@ -58,7 +57,9 @@ public class GarageTest {
 		
 		System.out.println("Test de f1");
 		collector.checkThat("Test de f1 2",garage.f1("marque2"),is(1));
-		//fail("Not yet implemented"); // TODO
+		
+		System.out.println("Test de f1");
+		collector.checkThat("Test de f1 3",garage2.f1("marque2"),is(0));
 	}
 	
 	/**
@@ -71,7 +72,9 @@ public class GarageTest {
 		
 		System.out.println("Test de f2");
 		collector.checkThat("Test de f2 2",garage.f2("modele2"),is(1));
-		//fail("Not yet implemented"); // TODO
+		
+		System.out.println("Test de f2");
+		collector.checkThat("Test de f2 3",garage2.f2("modele2"),is(0));
 	}
 	
 	/**
@@ -83,8 +86,8 @@ public class GarageTest {
 		collector.checkThat("Test de f3 1",garage.f3(),is(3));
 		
 		System.out.println("Test de f3");
-		collector.checkThat("Test de f3 1",garage2.f3(),is(0));
-		//fail("Not yet implemented"); // TODO
+		collector.checkThat("Test de f3 2",garage2.f3(),is(0));
+		
 	}
 	
 	/**
@@ -96,9 +99,8 @@ public class GarageTest {
 		collector.checkThat("Test de f4 1",garage.f4(),is(false));
 		
 		System.out.println("Test de f4");
-		collector.checkThat("Test de f4 1",garage2.f4(),is(true));
+		collector.checkThat("Test de f4 2",garage2.f4(),is(true));
 		
-		//fail("Not yet implemented"); // TODO
 	}
 	
 	/**
@@ -108,7 +110,9 @@ public class GarageTest {
 	public void testF5() {
 		System.out.println("Test de f5");
 		collector.checkThat("Test de f5 1",garage.f5(),is(2));
-		//fail("Not yet implemented"); // TODO
+
+		System.out.println("Test de f5");
+		collector.checkThat("Test de f5 2",garage2.f5(),is(-1));
 	}
 	
 	
@@ -124,7 +128,6 @@ public class GarageTest {
 		System.out.println("Test de f6");
 		collector.checkThat("Test de f6 2",garage.f6(),is(3));
 		
-		//fail("Not yet implemented"); // TODO
 	}
 	
 	/**
@@ -136,10 +139,11 @@ public class GarageTest {
 		collector.checkThat("Test de f7 1",garage.f7(),is(95000f));
 		
 		Garage garage_f7 = garage;
-		garage_f7.ajouter(new Auto("marque","modele", 100000.0f, 2.8f, 1, 5, 4));
+		garage_f7.ajouter(new Auto("marque","modele", 110000.0f, 2.8f, 1, 5, 4));
 		System.out.println("Test de f7");
-		collector.checkThat("Test de f7 1",garage_f7.f7(),is(0f));
-		//fail("Not yet implemented"); // TODO
+		collector.checkThat("Test de f7 2",garage_f7.f7(),is(105000f));
+		System.out.println("Test de f7");
+		collector.checkThat("Test de f7 3",garage2.f7(),is(0f));
 	}
 	
 	/**
@@ -157,7 +161,8 @@ public class GarageTest {
 		System.out.println("Test de f8");
 		collector.checkThat("Test de f8 2",garage_f8.f8(),is(27502));
 		
-		//fail("Not yet implemented"); // TODO
+		System.out.println("Test de f8");
+		collector.checkThat("Test de f8 3",garage2.f8(),is(0));
 	}
 	
 	/**
@@ -169,8 +174,8 @@ public class GarageTest {
 		collector.checkThat("Test de f9 1",garage.f9(),is(1));
 		
 		System.out.println("Test de f9");
-		collector.checkThat("Test de f9 1",garage2.f9(),is(-1));
-		 // TODO
+		collector.checkThat("Test de f9 2",garage2.f9(),is(-1));
+		
 	}
 	
 	/**
@@ -184,7 +189,7 @@ public class GarageTest {
 		
 		System.out.println("Test de f10");
 		collector.checkThat("Test de f10 2",garage.f10(6,10001),is(27502));
-		fail("Not yet implemented"); // TODO
+		
 	}
 
 }

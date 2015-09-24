@@ -14,48 +14,55 @@ public class Auto {
 			int vkilometrage, int vnb_portes, int vnb_places)
 	{	
 		// Initialise l'objet Auto courant avec les valeurs en paramètres
+		marque = vmarque;
+		modele = vmodele;
+		prix = vprix;
+		consommation = vconsommation;
+		kilometrage = vkilometrage;
+		nb_portes = vnb_portes;
+		nb_places = vnb_places;
 	}
 
 	public String getModele()
 	{
 		// renvoie le modèle de l'Auto courante
-		return "";
+		return modele;
 	}
 
 	public String getMarque()
 	{
 		// renvoie la marque de l'Auto courante
-		return "";
+		return marque;
 	}
 
 	public float getPrix()
 	{
 		// renvoie le prix de l'Auto courante
-		return (float)0;
+		return prix;
 	}
 
 	public float getConso()
 	{
 		// renvoie la consommation de l'Auto courante
-		return (float)0;
+		return consommation;
 	}
 	
 	public int getKilometrage()
 	{
 		// renvoie le kilométrage de l'Auto courante
-		return 0;
+		return kilometrage;
 	}
 
 	public int getNbPortes()
 	{
 		// renvoie le nombre de portes de l'Auto courante
-		return 0;
+		return nb_portes;
 	}
 
 	public int getNbPlaces()
 	{
 		// renvoie le nombre de places de l'Auto courante
-		return 0;
+		return nb_places;
 	}
 	
 	public void afficher()
