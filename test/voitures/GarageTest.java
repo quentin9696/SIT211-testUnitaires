@@ -128,6 +128,8 @@ public class GarageTest {
 		System.out.println("Test de f6");
 		collector.checkThat("Test de f6 2",garage.f6(),is(3));
 		
+		System.out.println("Test de f6");
+		collector.checkThat("Test de f6 2",garage2.f6(),is(-1));
 	}
 	
 	/**
@@ -176,6 +178,11 @@ public class GarageTest {
 		System.out.println("Test de f9");
 		collector.checkThat("Test de f9 2",garage2.f9(),is(-1));
 		
+		garage2.ajouter(new Auto("marque","modele", 10000.0f, 5.8f, 100000, 3, 4));
+		
+		System.out.println("Test de f9");
+		collector.checkThat("Test de f9 3",garage2.f9(),is(-1));
+		
 	}
 	
 	/**
@@ -188,7 +195,10 @@ public class GarageTest {
 		collector.checkThat("Test de f10 2",garage.f10(2,1),is(-1));
 		
 		System.out.println("Test de f10");
-		collector.checkThat("Test de f10 2",garage.f10(6,10001),is(27502));
+		collector.checkThat("Test de f10 2",garage.f10(5,10001),is(2));
+		
+		System.out.println("Test de f10");
+		collector.checkThat("Test de f10 3",garage2.f10(2,10000),is(-1));
 		
 	}
 
