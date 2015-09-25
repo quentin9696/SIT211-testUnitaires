@@ -57,8 +57,8 @@ public class Garage {
 			return 0;
 		int compteur = 0;
 		for(int i=0; i<nombreAutos; i++) {
-			auto a = The_garage[i];
-			if (a.getMarque.equalsIgnoreCase(m))
+			Auto a = The_garage[i];
+			if (a.getModele().equalsIgnoreCase(m))
 				compteur++;
 
 		}	
@@ -98,11 +98,11 @@ public class Garage {
 		if (nombreAutos == 0)
 			return -1;
 		for (int i =0; i < nombreAutos; i++) {
-			auto a = The_garage[i];
+			Auto a = The_garage[i];
 			float temp = a.getPrix();
-			if (a > max)
+			if (temp > max)
 			{
-				a = max;
+				max = temp;
 				indice_saved = indice;
 			}
 			indice++;
@@ -138,8 +138,8 @@ public class Garage {
 			return 0;
 		int km = 0;
 			for(int i=0; i<nombreAutos; i++) {
-			auto a = The_garage[i];
-			km += a.getKilometrage;
+			Auto a = The_garage[i];
+			km += a.getKilometrage();
 
 		}
 
@@ -168,14 +168,16 @@ public class Garage {
 	}
 
 	public int f10(int n, int k)
-	{
-float min = this.The_garage[0].getKilometrage();
-		int indice = 0, indice_saved = -1;
+	{	
 		if (nombreAutos == 0)
 			return -1;
-			for(int i=0; i<nombreAutos; i++) {
-			auto a = The_garage[i];
-			if a.getNbPortes() >= n && a.getKilometrage() < k
+		
+		float min = this.The_garage[0].getKilometrage();
+		int indice = 0, indice_saved = -1;
+		
+		for(int i=0; i<nombreAutos; i++) {
+			Auto a = The_garage[i];
+			if (a.getNbPortes() >= n && a.getKilometrage() < k)
 					{
 				if (a.getKilometrage() < min)
 				{
